@@ -4,7 +4,7 @@ public class World {
     public static void main(String[] args) {
         System.out.println("system wystartował");
         Direction[] direction=new Direction[args.length];
-        int licznik=0;
+        int counter=0;
         for(String argument : args) {
             Direction kierunek = switch (argument) {
                 case "f" -> Direction.FORWARD;
@@ -13,8 +13,8 @@ public class World {
                 case "l" -> Direction.LEFT;
                 default -> Direction.DEFAULT;
             };
-            direction[licznik]=kierunek;
-            licznik ++;
+            direction[counter]=kierunek;
+            counter ++;
         }
         run(direction);
         System.out.println("system zakończył działanie");
