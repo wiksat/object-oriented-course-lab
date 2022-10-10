@@ -6,7 +6,6 @@ public class World {
         Direction[] direction=new Direction[args.length];
         int counter=0;
         for(String argument : args) {
-//            twojastara
             Direction kierunek = switch (argument) {
                 case "f" -> Direction.FORWARD;
                 case "b" -> Direction.BACKWARD;
