@@ -10,7 +10,7 @@ public class MainTest {
         Animal animal1=new Animal();
         String[] strAr1=new String[] {"r", "f", "f","f"};
         MoveDirection[] moveDirections1=optionParser.parse(strAr1);
-        World.doIt(moveDirections1,animal1);
+        World.run(moveDirections1,animal1);
         Assertions.assertEquals("(4,2) Wschód",animal1.toString());
     }
 }
