@@ -4,20 +4,15 @@ package agh.ics.oop;
 public class World {
     public static void main(String[] args) {
         System.out.println("system wystartował");
-        Animal animal=new Animal();
         OptionParser optionParser=new OptionParser();
-//        animal.move(MoveDirection.RIGHT);
-//        animal.move(MoveDirection.FORWARD);
-//        animal.move(MoveDirection.FORWARD);
-//        animal.move(MoveDirection.FORWARD);
-//        System.out.println(animal.toString());
-        MoveDirection[] moveDirections=optionParser.parse(args);
-        run(moveDirections,animal);
+        MoveDirection[] directions=optionParser.parse(args);
+        IWorldMap map = new RectangularMap(10, 5);
+        Vector2d[] positions = { new Vector2d(2,2), new Vector2d(3,4) };
+        IEngine engine = new SimulationEngine(directions, map, positions);
+        engine.run();
+        System.out.println(map);
         System.out.println("system zakończył działanie");
-//        Zadanie 10:
-//        Aby zapobiec pojawieniu się dwóch zwierząt na tym samym miejscu można stworzyć w klasie Animals metody zwracające pozycję zwierzęcia (jako x i y, bo teraz mamy tylko stringa),
-//        obliczenie na które polu powinno pojawić się zwierze, a następnie wywołanie metody "isAt" dla drugiego zwierzęcia od obliczonej pozycji.
-//        Wtedy dowiemy się czy miejsce jest puste, a jeśli tak, to ruszamy się zwierzakiem
+
     }
     public static void run(MoveDirection[] args, Animal animal){
         for(MoveDirection argument : args){
