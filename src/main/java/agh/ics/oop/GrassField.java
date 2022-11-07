@@ -1,18 +1,18 @@
 package agh.ics.oop;
 import java.lang.Math;
 public class GrassField extends AbstractWorldMap {
-    private final int rangex;
-    private final int rangey;
+    private final int maxX;
+    private final int maxY;
 
     public GrassField(int grass){
-        this.rangex = (int)Math.sqrt(grass*10);
-        this.rangey = (int)Math.sqrt(grass*10);
+        this.maxX = (int)Math.sqrt(grass*10);
+        this.maxY = (int)Math.sqrt(grass*10);
         for (int i = 0; i < grass; i++){
-            int randx = (int)(Math.random()*(this.rangex+1));
-            int randy = (int)(Math.random()*(this.rangey+1));
-            Grass trawka = new Grass(new Vector2d(randx,randy));
-            this.grasses.add(trawka);
-            this.mapElements.add(trawka);
+            int randx = (int)(Math.random()*(this.maxX +1));
+            int randy = (int)(Math.random()*(this.maxY +1));
+            Grass grasss = new Grass(new Vector2d(randx,randy));
+            this.grasses.add(grasss);
+            this.mapElements.add(grasss);
         }
     }
     @Override

@@ -54,7 +54,7 @@ abstract class AbstractWorldMap implements IWorldMap {
         }
         return null;
     }
-    public List<Animal> getArray(){
+    public List<Animal> getAnimals(){
         return this.animals;
     }
 }
