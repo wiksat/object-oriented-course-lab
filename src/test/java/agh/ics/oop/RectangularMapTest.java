@@ -1,39 +1,66 @@
 package agh.ics.oop;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class RectangularMapTest {
-    private final IWorldMap map = new RectangularMap(10,5);
+
+    RectangularMap rectangularMap = new RectangularMap(10, 10);
+
     @Test
-    void canMoveTo(){
-        this.map.place(new Animal(this.map,new Vector2d(2,3)));
-        this.map.place(new Animal(this.map,new Vector2d(7,3)));
-        Assertions.assertFalse(this.map.canMoveTo(new Vector2d(2,3)));
-        Assertions.assertFalse(this.map.canMoveTo(new Vector2d(7,3)));
-        Assertions.assertTrue(this.map.canMoveTo(new Vector2d(10,3)));
-        Assertions.assertFalse(this.map.canMoveTo(new Vector2d(-1,3)));
+    public void testIsOccupied() {
+        Animal a1 = new Animal(rectangularMap, new Vector2d(2, 2));
+        Animal a2 = new Animal(rectangularMap, new Vector2d(9, 9));
+
+        rectangularMap.place(a1);
+        rectangularMap.place(a2);
+
+        assertTrue(rectangularMap.isOccupied(a1.getPosition()));
+        assertTrue(rectangularMap.isOccupied(a2.getPosition()));
+        assertFalse(rectangularMap.isOccupied(new Vector2d(5, 5)));
     }
+
     @Test
-    void place(){
-        Assertions.assertTrue(this.map.place(new Animal(this.map,new Vector2d(2,3))));
-        Assertions.assertFalse(this.map.place(new Animal(this.map,new Vector2d(2,3))));
-        Assertions.assertTrue(this.map.place(new Animal(this.map,new Vector2d(10,8))));
-        Assertions.assertFalse(this.map.place(new Animal(this.map,new Vector2d(11,3))));
+    public void testCanMoveTo() {
+        Animal a1 = new Animal(rectangularMap, new Vector2d(2, 2));
+        Animal a2 = new Animal(rectangularMap, new Vector2d(9, 9));
+
+        rectangularMap.place(a1);
+        rectangularMap.place(a2);
+
+        assertFalse(rectangularMap.canMoveTo(a1.getPosition()));
+        assertFalse(rectangularMap.canMoveTo(a2.getPosition()));
+        assertFalse(rectangularMap.canMoveTo(new Vector2d(-1, -1)));
+        assertFalse(rectangularMap.canMoveTo(new Vector2d(10, 10)));
+        assertTrue(rectangularMap.canMoveTo(new Vector2d(1, 1)));
+
     }
+
     @Test
-    void isOccupied(){
-        this.map.place(new Animal(this.map,new Vector2d(2,3)));
-        Assertions.assertTrue(this.map.isOccupied(new Vector2d(2,3)));
-        Assertions.assertFalse(this.map.isOccupied(new Vector2d(10,3)));
+    public void testObjectAt() {
+        Animal a1 = new Animal(rectangularMap, new Vector2d(2, 2));
+        Animal a2 = new Animal(rectangularMap, new Vector2d(9, 9));
+
+        rectangularMap.place(a1);
+        rectangularMap.place(a2);
+
+        assertEquals(a1, rectangularMap.objectAt(new Vector2d(2, 2)));
+        assertEquals(a2, rectangularMap.objectAt(new Vector2d(9, 9)));
+        assertNull(rectangularMap.objectAt(new Vector2d(8, 8)));
     }
+
     @Test
-    void objectAt(){
-        Animal animal1 = new Animal(this.map,new Vector2d(2,3));
-        Animal animal2 = new Animal(this.map,new Vector2d(8,5));
-        this.map.place(animal1);
-        this.map.place(animal2);
-        Assertions.assertEquals(animal1,this.map.objectAt(new Vector2d(2,3)));
-        Assertions.assertEquals(animal2,this.map.objectAt(new Vector2d(8,5)));
-        Assertions.assertNull(this.map.objectAt(new Vector2d(7, 7)));
+    public void testPlace() {
+        Vector2d pos = new Vector2d(2, 2);
+        Animal a1 = new Animal(rectangularMap, pos);
+        rectangularMap.place(a1);
+
+        assertTrue(
+                !rectangularMap.canMoveTo(pos)
+                        && rectangularMap.isOccupied(pos)
+                        && a1.equals(rectangularMap.objectAt(pos)));
     }
+
 }

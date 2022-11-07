@@ -9,6 +9,8 @@ public class GrassFieldTest {
         this.map.place(new Animal(this.map,new Vector2d(2,4)));
         Assertions.assertFalse(this.map.canMoveTo(new Vector2d(2,4)));
         Assertions.assertTrue(this.map.canMoveTo(new Vector2d(0,3)));
+        Assertions.assertTrue(this.map.canMoveTo(new Vector2d(-2,3)));
+        System.out.println(map);
     }
     @Test
     void place(){
@@ -23,6 +25,7 @@ public class GrassFieldTest {
         Assertions.assertTrue(this.map.isOccupied(new Vector2d(2,3)));
         Assertions.assertTrue(this.map.isOccupied(new Vector2d(7,3)));
         Assertions.assertFalse(this.map.isOccupied(new Vector2d(-1,3)));
+        System.out.println(map);
     }
     @Test
     void objectAt(){
