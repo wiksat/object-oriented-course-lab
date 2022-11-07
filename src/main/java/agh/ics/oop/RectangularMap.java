@@ -20,7 +20,7 @@ public class RectangularMap implements IWorldMap {
 
     @Override
     public boolean place(Animal animal) {
-        Vector2d animalPosition = animal.position();
+        Vector2d animalPosition = animal.getPosition();
 
         if (canMoveTo(animalPosition)) {
             animals.add(animal);

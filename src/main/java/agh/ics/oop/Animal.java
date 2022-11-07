@@ -1,6 +1,6 @@
 package agh.ics.oop;
 
-public class Animal {
+public class Animal extends AbstractWorldMapElement  {
 
     private MapDirection direction=MapDirection.NORTH;
     private Vector2d position = new Vector2d(2,2);
@@ -13,7 +13,7 @@ public class Animal {
         this.map=map;
         this.position=initialPosition;
     }
-    public Vector2d position() {
+    public Vector2d getPosition() {
         return this.position;
     }
     public String getA(){
