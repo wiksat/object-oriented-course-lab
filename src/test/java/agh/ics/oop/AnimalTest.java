@@ -27,6 +27,7 @@ public class AnimalTest {
             Assertions.assertTrue(animal.isAt(supposed_position[i]));
             i++;
         }
+//        System.out.println(map);
     }
 //    @Test
 //    void correctOrientation(){

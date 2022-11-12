@@ -12,7 +12,9 @@ public class SimulationEngine implements IEngine{
     }
     public void placeAnimals() {
         for (Vector2d s : startPositions) {
-            map.place(new Animal(map, s));
+            Animal animal=new Animal(map, s);
+            animal.addObserver((IPositionChangeObserver) map);
+            map.place(animal);
         }
     }
 
@@ -21,7 +23,7 @@ public class SimulationEngine implements IEngine{
         placeAnimals();
         int i = 0;
         while (i < moves.length) {
-            for (Animal a : ((GrassField) map).getAnimals()) {
+            for (Animal a : ((AbstractWorldMap) map).getAnimals()) {
                 if (i == moves.length) break;
                 a.move(moves[i]);
                 i++;
