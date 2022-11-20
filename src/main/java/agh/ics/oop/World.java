@@ -9,7 +9,9 @@ import java.util.List;
 public class World {
     public static void main(String[] args) {
         System.out.println("system wystartował");
+
         Application.launch(App.class, args);
+
 //        try {
 //            OptionParser optionParser=new OptionParser();
 //            MoveDirection[] directions=optionParser.parse(args);

@@ -1,9 +1,6 @@
 package agh.ics.oop;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
     protected List<Animal> animalsList = new ArrayList<>();
@@ -12,16 +9,52 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
     protected Map<Vector2d, Grass> grasses = new HashMap<Vector2d, Grass>();
 
     protected final MapVisualizer visualize = new MapVisualizer(this);
-//    @Override
-//    public String toString() {
-//        return this.visualize.draw(new Vector2d(0,0),new Vector2d(10,10));
-//    }
+
 
     @Override
     public boolean canMoveTo(Vector2d position) {
         return (!animals.containsKey(position));
     }
-
+    @Override
+    public String toString() {
+        Set<Vector2d> animals_set = this.animals.keySet();
+        Set<Vector2d> grasses_set = this.grasses.keySet();
+        Vector2d vectorR = new Vector2d(0,0);
+        Vector2d vectorL = new Vector2d(0,0);
+        for (Vector2d vector : animals_set) {
+            vectorR = vectorR.upperRight(vector);
+            vectorL = vectorL.lowerLeft(vector);
+        }
+        for (Vector2d vector : grasses_set) {
+            vectorR = vectorR.upperRight(vector);
+            vectorL = vectorL.lowerLeft(vector);
+        }
+        return this.visualize.draw(vectorL,vectorR);
+    }
+    public Vector2d getLowerLeftDrawLimit(){
+        Set<Vector2d> animals_set = this.animals.keySet();
+        Set<Vector2d> grasses_set = this.grasses.keySet();
+        Vector2d vectorL = new Vector2d(0,0);
+        for (Vector2d vector : animals_set) {
+            vectorL = vectorL.lowerLeft(vector);
+        }
+        for (Vector2d vector : grasses_set) {
+            vectorL = vectorL.lowerLeft(vector);
+        }
+        return vectorL;
+    }
+    public Vector2d getUpperRightDrawLimit(){
+        Set<Vector2d> animals_set = this.animals.keySet();
+        Set<Vector2d> grasses_set = this.grasses.keySet();
+        Vector2d vectorR = new Vector2d(0,0);
+        for (Vector2d vector : animals_set) {
+            vectorR = vectorR.upperRight(vector);
+        }
+        for (Vector2d vector : grasses_set) {
+            vectorR = vectorR.upperRight(vector);
+        }
+        return vectorR;
+    }
     @Override
     public boolean place(Animal animal) {
         if(this.animals.get(animal.getPosition()) != null){

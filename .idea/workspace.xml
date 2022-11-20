@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab6">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
+    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab7-1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +85,11 @@
   </component>
   <component name="RunManager" selected="Application.World">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.gui.App" />
       <module name="oolab.main" />
+      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.ics.oop.gui.*" />
@@ -108,6 +105,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
+      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.ics.oop.*" />
@@ -164,7 +162,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OptionParserTest.correctParser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -177,7 +175,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.OptionParserTest.correctParser&quot;" />
+            <option value="&quot;agh.ics.oop.OptionParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,17 +188,17 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.World" />
+      <item itemvalue="Gradle.OptionParserTest" />
       <item itemvalue="Gradle.GrassFieldTest" />
       <item itemvalue="Gradle.GrassFieldTest.place" />
-      <item itemvalue="Gradle.OptionParserTest.correctParser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OptionParserTest" />
         <item itemvalue="Application.World" />
         <item itemvalue="Application.App" />
         <item itemvalue="Gradle.GrassFieldTest.place" />
         <item itemvalue="Gradle.GrassFieldTest" />
-        <item itemvalue="Gradle.OptionParserTest.correctParser" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +231,8 @@
       <workItem from="1668272349279" duration="9009000" />
       <workItem from="1668379218737" duration="253000" />
       <workItem from="1668427871070" duration="4376000" />
-      <workItem from="1668810253001" duration="9450000" />
+      <workItem from="1668810253001" duration="12624000" />
+      <workItem from="1668906732407" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="commit one">
       <created>1665049921556</created>
@@ -368,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668283721041</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="lab7-1">
+      <created>1668903482550</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1668903482550</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +407,7 @@
     <MESSAGE value="lab5-3" />
     <MESSAGE value="lab5-4" />
     <MESSAGE value="lab6" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab6" />
+    <MESSAGE value="lab7-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab7-1" />
   </component>
 </project>
