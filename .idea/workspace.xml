@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab7-1">
+    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab7-2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
     </list>
@@ -116,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AnimalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +131,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.GrassFieldTest&quot;" />
+            <option value="&quot;agh.ics.oop.AnimalTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -188,17 +190,17 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.World" />
+      <item itemvalue="Gradle.AnimalTest" />
       <item itemvalue="Gradle.OptionParserTest" />
-      <item itemvalue="Gradle.GrassFieldTest" />
       <item itemvalue="Gradle.GrassFieldTest.place" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AnimalTest" />
         <item itemvalue="Gradle.OptionParserTest" />
         <item itemvalue="Application.World" />
         <item itemvalue="Application.App" />
         <item itemvalue="Gradle.GrassFieldTest.place" />
-        <item itemvalue="Gradle.GrassFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +234,8 @@
       <workItem from="1668379218737" duration="253000" />
       <workItem from="1668427871070" duration="4376000" />
       <workItem from="1668810253001" duration="12624000" />
-      <workItem from="1668906732407" duration="676000" />
+      <workItem from="1668906732407" duration="773000" />
+      <workItem from="1668980442017" duration="4540000" />
     </task>
     <task id="LOCAL-00001" summary="commit one">
       <created>1665049921556</created>
@@ -374,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668903482550</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="lab7-2">
+      <created>1668937281402</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1668937281402</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +418,7 @@
     <MESSAGE value="lab5-4" />
     <MESSAGE value="lab6" />
     <MESSAGE value="lab7-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab7-1" />
+    <MESSAGE value="lab7-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab7-2" />
   </component>
 </project>

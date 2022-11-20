@@ -18,9 +18,6 @@ public class App extends Application {
     private GrassField map;
     @Override
     public void init() throws Exception {
-
-        super.init();
-
         Parameters parameters = getParameters();
         System.out.println(parameters.getRaw());
         List<String> argsTemp = parameters.getRaw();
@@ -35,7 +32,8 @@ public class App extends Application {
             engine.run();
             System.out.println(map);
         } catch(IllegalArgumentException ex) {
-            throw new Exception(ex.toString());
+//            throw new Exception(ex.toString());
+            System.out.println(ex.toString());
         }
     }
     @Override

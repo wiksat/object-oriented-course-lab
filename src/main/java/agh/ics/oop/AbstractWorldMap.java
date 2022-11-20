@@ -9,6 +9,7 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
     protected Map<Vector2d, Grass> grasses = new HashMap<Vector2d, Grass>();
 
     protected final MapVisualizer visualize = new MapVisualizer(this);
+    protected MapBoundary mapBoundary=new MapBoundary();
 
 
     @Override
@@ -17,43 +18,26 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
     }
     @Override
     public String toString() {
-        Set<Vector2d> animals_set = this.animals.keySet();
-        Set<Vector2d> grasses_set = this.grasses.keySet();
-        Vector2d vectorR = new Vector2d(0,0);
-        Vector2d vectorL = new Vector2d(0,0);
-        for (Vector2d vector : animals_set) {
-            vectorR = vectorR.upperRight(vector);
-            vectorL = vectorL.lowerLeft(vector);
-        }
-        for (Vector2d vector : grasses_set) {
-            vectorR = vectorR.upperRight(vector);
-            vectorL = vectorL.lowerLeft(vector);
-        }
+        this.mapBoundary.sortuj();
+        int x = this.mapBoundary.X_el.get(0).getPosition().x;
+        int y = this.mapBoundary.Y_el.get(0).getPosition().y;
+        Vector2d vectorL = new Vector2d(x,y);
+        x = this.mapBoundary.X_el.get(this.mapBoundary.X_el.size()-1).getPosition().x;
+        y = this.mapBoundary.Y_el.get(this.mapBoundary.Y_el.size()-1).getPosition().y;
+        Vector2d vectorR = new Vector2d(x,y);
         return this.visualize.draw(vectorL,vectorR);
     }
     public Vector2d getLowerLeftDrawLimit(){
-        Set<Vector2d> animals_set = this.animals.keySet();
-        Set<Vector2d> grasses_set = this.grasses.keySet();
-        Vector2d vectorL = new Vector2d(0,0);
-        for (Vector2d vector : animals_set) {
-            vectorL = vectorL.lowerLeft(vector);
-        }
-        for (Vector2d vector : grasses_set) {
-            vectorL = vectorL.lowerLeft(vector);
-        }
-        return vectorL;
+        this.mapBoundary.sortuj();
+        int x = this.mapBoundary.X_el.get(0).getPosition().x;
+        int y = this.mapBoundary.Y_el.get(0).getPosition().y;
+        return new Vector2d(x,y);
     }
     public Vector2d getUpperRightDrawLimit(){
-        Set<Vector2d> animals_set = this.animals.keySet();
-        Set<Vector2d> grasses_set = this.grasses.keySet();
-        Vector2d vectorR = new Vector2d(0,0);
-        for (Vector2d vector : animals_set) {
-            vectorR = vectorR.upperRight(vector);
-        }
-        for (Vector2d vector : grasses_set) {
-            vectorR = vectorR.upperRight(vector);
-        }
-        return vectorR;
+        this.mapBoundary.sortuj();
+        int x = this.mapBoundary.X_el.get(this.mapBoundary.X_el.size()-1).getPosition().x;
+        int y = this.mapBoundary.Y_el.get(this.mapBoundary.Y_el.size()-1).getPosition().y;
+        return new Vector2d(x,y);
     }
     @Override
     public boolean place(Animal animal) {
@@ -63,6 +47,7 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
         }
         this.animalsList.add(animal);
         this.animals.put(animal.getPosition(),animal);
+        mapBoundary.put(animal);
         return true;
     }
 

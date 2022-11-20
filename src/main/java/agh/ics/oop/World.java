@@ -4,13 +4,15 @@ package agh.ics.oop;
 import agh.ics.oop.gui.App;
 import javafx.application.Application;
 
-import java.util.List;
-
 public class World {
     public static void main(String[] args) {
         System.out.println("system wystartował");
+        try{
+            Application.launch(App.class, args);
+        }catch(Exception ex) {
+            System.out.println(ex.toString());
+        }
 
-        Application.launch(App.class, args);
 
 //        try {
 //            OptionParser optionParser=new OptionParser();
