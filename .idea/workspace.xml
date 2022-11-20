@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab5-4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/IPositionChangeObserver.java" afterDir="false" />
+    <list default="true" id="2127f223-38ef-47a3-8a17-7c943165c9c7" name="Changes" comment="lab6">
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +40,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -82,7 +84,40 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Vector2dTest">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="agh.ics.oop" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.World">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.gui.App" />
+      <module name="oolab.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
+      <module name="oolab.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -106,7 +141,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.place" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -119,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.MapDirectionTest&quot;" />
+            <option value="&quot;agh.ics.oop.GrassFieldTest.place&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +164,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OptionParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionParserTest.correctParser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,53 +177,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.OptionParserTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.RectangularMapTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.Vector2dTest&quot;" />
+            <option value="&quot;agh.ics.oop.OptionParserTest.correctParser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,19 +188,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.World" />
       <item itemvalue="Gradle.GrassFieldTest" />
-      <item itemvalue="Gradle.MapDirectionTest" />
-      <item itemvalue="Gradle.OptionParserTest" />
-      <item itemvalue="Gradle.Vector2dTest" />
-      <item itemvalue="Gradle.RectangularMapTest" />
+      <item itemvalue="Gradle.GrassFieldTest.place" />
+      <item itemvalue="Gradle.OptionParserTest.correctParser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.RectangularMapTest" />
-        <item itemvalue="Gradle.OptionParserTest" />
-        <item itemvalue="Gradle.MapDirectionTest" />
+        <item itemvalue="Application.World" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Gradle.GrassFieldTest.place" />
         <item itemvalue="Gradle.GrassFieldTest" />
+        <item itemvalue="Gradle.OptionParserTest.correctParser" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +230,10 @@
       <workItem from="1667781793917" duration="4139000" />
       <workItem from="1667823892591" duration="2973000" />
       <workItem from="1668265025171" duration="7284000" />
-      <workItem from="1668272349279" duration="8662000" />
+      <workItem from="1668272349279" duration="9009000" />
+      <workItem from="1668379218737" duration="253000" />
+      <workItem from="1668427871070" duration="4376000" />
+      <workItem from="1668810253001" duration="9450000" />
     </task>
     <task id="LOCAL-00001" summary="commit one">
       <created>1665049921556</created>
@@ -369,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667826037116</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="lab6">
+      <created>1668283721041</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668283721041</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +400,7 @@
     <MESSAGE value="lab5-2" />
     <MESSAGE value="lab5-3" />
     <MESSAGE value="lab5-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab5-4" />
+    <MESSAGE value="lab6" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab6" />
   </component>
 </project>

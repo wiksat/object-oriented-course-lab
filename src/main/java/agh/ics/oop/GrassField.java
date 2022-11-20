@@ -16,7 +16,7 @@ public class GrassField extends AbstractWorldMap {
             Grass grasss = new Grass(new Vector2d(randx,randy));
             if (objectAt(grassPosition) == null) {
                 this.grasses.put(grasss.getPosition(),grasss);
-//                this.mapElements.add(grasss);
+
             }
 
         }

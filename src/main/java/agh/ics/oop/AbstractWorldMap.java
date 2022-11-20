@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
+public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
     protected List<Animal> animalsList = new ArrayList<>();
     protected Map<Vector2d, Animal> animals = new HashMap<>();
 
@@ -25,11 +25,11 @@ abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
     @Override
     public boolean place(Animal animal) {
         if(this.animals.get(animal.getPosition()) != null){
-            return false;
+//            return false;
+            throw new IllegalArgumentException(animal.getPosition()+ " is already occupied");
         }
         this.animalsList.add(animal);
         this.animals.put(animal.getPosition(),animal);
-//        this.mapElements.add(animal);
         return true;
     }
 
