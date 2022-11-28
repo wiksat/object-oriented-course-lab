@@ -11,11 +11,12 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
     protected final MapVisualizer visualize = new MapVisualizer(this);
     protected MapBoundary mapBoundary=new MapBoundary();
 
-
     @Override
     public boolean canMoveTo(Vector2d position) {
         return (!animals.containsKey(position));
     }
+    @Override
+    public MapBoundary getBound(){ return this.mapBoundary; }
     @Override
     public String toString() {
         this.mapBoundary.sortuj();
@@ -73,7 +74,9 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
             animals.put(newPosition, a);
         }
     }
+    @Override
     public List<Animal> getAnimals(){
         return this.animalsList;
     }
+
 }

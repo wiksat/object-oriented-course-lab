@@ -33,6 +33,17 @@ public class Animal extends AbstractWorldMapElement  {
     public boolean isAt(Vector2d position){
         return position.equals(this.position);
     }
+
+    @Override
+    public String getName() {
+        return switch (this.direction) {
+            case NORTH -> "up";
+            case EAST -> "right";
+            case SOUTH -> "down";
+            case WEST -> "left";
+        };
+    }
+
     public void move(MoveDirection direction){
         if(direction==MoveDirection.RIGHT){
             this.direction=this.direction.next();
@@ -46,8 +57,10 @@ public class Animal extends AbstractWorldMapElement  {
 //                this.position=beforeTest;
 //            }
             if (map.canMoveTo(beforeTest)) {
-                positionChanged(this.position,beforeTest);
+                Vector2d temp2=this.position;
                 this.position=beforeTest;
+                positionChanged(temp2,beforeTest);
+
             }
         }
         else if (direction==MoveDirection.BACKWARD) {
@@ -57,8 +70,10 @@ public class Animal extends AbstractWorldMapElement  {
 //                this.position=beforeTest;
 //            }
             if (map.canMoveTo(beforeTest)) {
-                positionChanged(this.position,beforeTest);
+                Vector2d temp2=this.position;
                 this.position=beforeTest;
+                positionChanged(temp2,beforeTest);
+
             }
         }
     }
@@ -69,6 +84,7 @@ public class Animal extends AbstractWorldMapElement  {
         this.observers.remove(observer);
     }
     void positionChanged(Vector2d oldPosition, Vector2d newPosition){
+        this.map.getBound().sortuj();
         for (IPositionChangeObserver Observer: this.observers) {
             Observer.positionChanged(oldPosition,newPosition);
         }
